@@ -7,7 +7,8 @@
 FROM centos:centos7
 MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
-RUN yum -y update; yum clean all
+#RUN yum -y update; yum clean all
+RUN yum clean all
 RUN yum -y install epel-release; yum clean all
 RUN yum -y install httpd php php-mysql php-gd pwgen supervisor bash-completion openssh-server psmisc tar; yum clean all
 ADD ./start.sh /start.sh
